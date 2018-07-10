@@ -1,0 +1,134 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+<div class="homepage-background" style="background-image:url('/assets/images/homepage-bg.jpg')";>
+    {% include 'components/header.twig' %}
+
+    <h1>{{ entry.title }}</h1>
+</div>
+
+{% for block in entry.textBanner %}
+
+<banner-advice>
+  <div class="container">
+
+    {% if block.type == 'bannerText' %}
+      <h2>{{ block.bannerHeading }}</h2>
+
+      <p>{{ block.bannerContent }}</p>
+    {% endif %}
+
+    <img class="dog" src="/assets/images/dog.png" alt="Dog">
+  </div>
+</banner-advice>
+
+{% endfor %}
+
+<help-section class="help-background" style="background-image:url('/assets/images/help-section-bg.jpg')";>
+  <div class="container">
+      <div class="blocks-container">
+        <div class="blocks">
+          <div class="box-link">
+            <div class="circle-help">
+              <p>How can we help?</p>
+            </div>
+          </div>
+          <div class="box-link">
+
+          </div>
+          <div class="box-link">
+              <div class="text">
+                <p>first time buyes</p>
+              </div>
+              <div class="slide-up">
+                <h5>We are specialists in helping first time buyers get on the property ladder.</h5>
+                <a class="button-default" href="#">Tell me more</a>
+              </div>
+          </div>
+          <div class="box-link">
+              <div class="text">
+                <p>buy to let mortgages</p>
+              </div>
+              <div class="slide-up">
+                <h5>Specialist information for landlords to be.</h5>
+                <a class="button-default" href="#">Tell me more</a>
+              </div>
+          </div>
+          <div class="box-link">
+            <div class="text">
+              <p>buy to let</p>
+            </div>
+            <div class="slide-up">
+              <h5>We are specialists in helping first time buyers get on the property ladder.</h5>
+              <a class="button-default" href="#">Tell me more</a>
+            </div>
+          </div>
+          <div class="box-link">
+            <div class="text">
+              <p>remortgages</p>
+            </div>
+            <div class="slide-up">
+              <h5>We are specialists in helping first time buyers get on the property ladder.</h5>
+              <a class="button-default" href="#">Tell me more</a>
+            </div>
+          </div>
+          <div class="box-link">
+            <div class="text">
+              <p>homemover</p>
+            </div>
+            <div class="slide-up">
+              <h5>We are specialists in helping first time buyers get on the property ladder.</h5>
+              <a class="button-default" href="#">Tell me more</a>
+            </div>
+          </div>
+          <div class="box-link">
+
+          </div>
+          <div class="box-link">
+
+          </div>
+          <div class="box-link">
+            <div class="text">
+              <p>armed forces</p>
+            </div>
+            <div class="slide-up">
+              <h5>We are specialists in helping first time buyers get on the property ladder.</h5>
+                <a class="button-default" href="#">Tell me more</a>
+            </div>
+          </div>
+          <div class="box-link">
+
+          </div>
+          <div class="box-link">
+
+          </div>
+      </div>
+    </div>
+
+  </div>
+</help-section>
+
+<customers-say>
+  <div class="container">
+    <h2>what our customers say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p class="content">Claire is fantastic, helpful and incredibly knowledgeable. I could not recommend her enough. She made our purchase a walk in the park and even sold our house due to mentioning our property to her other clients! Wonderful women!!! Thank you Claire.</p>
+        <p class="company-name">Mr and Mrs Thistlethwaite. February 2018.</p>
+      </div>
+      <div class="testimonial">
+        <p class="content">Claire is fantastic, helpful and incredibly knowledgeable. I could not recommend her enough. She made our purchase a walk in the park and even sold our house due to mentioning our property to her other clients! Wonderful women!!! Thank you Claire.</p>
+        <p class="company-name">Mr and Mrs Thistlethwaite. February 2018.</p>
+      </div>
+      <div class="testimonial">
+        <p class="content">Claire is fantastic, helpful and incredibly knowledgeable. I could not recommend her enough. She made our purchase a walk in the park and even sold our house due to mentioning our property to her other clients! Wonderful women!!! Thank you Claire.</p>
+        <p class="company-name">Mr and Mrs Thistlethwaite. February 2018.</p>
+      </div>
+    </div>
+    <img class="dog-head" src="/assets/images/dog-head.png" alt="Dog Head">
+  </div>
+</customers-say>
+
+
+{% endblock %}

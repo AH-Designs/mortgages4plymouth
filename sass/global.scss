@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@import "base/reset";
+@import "base/settings";
+@import "base/mixins";
+
+// Optional
+@import "base/fonts";
+
+// Components
+
+@import "components/navigation";
+@import "components/buttons";
+@import "components/header";
+@import "components/footer";
+@import "components/slider";
+
+
+// Pages
+@import "pages/home";
+
+
+
+// Global
+*{
+  margin:0;
+  padding:0;
+  outline:0;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+
+.mediaquery{
+  position: absolute;
+    width:200px;
+    height: 200px;
+    position: fixed;
+    bottom:-100px;
+    right:-100px;
+    transform: rotate(45deg);
+    z-index: 100;
+
+// Bootstrap Media quieries helpercode
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) { //desktops
+ background:red; //Red
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+   background:blue; //Blue
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  background: green; //Green
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 767px) {
+   background: orange; //Orange
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  background: yellow; //YELLOW
+}
+
+    // Media Queries helper code
+
+    //min
+    // @media (max-width: $min+px) {
+    //    background:#99e699;
+    // }
+
+    // //small
+    // @media (min-width: $small+px) {
+    //    background:#cc99ff; //PURPLE
+    // }
+    // // medium
+    // @media (min-width: $medium+px) {
+    //    background: #ffe0b3; //YELLO
+    // }
+    // // large
+    // @media (min-width: $large+px) {
+    //    background: #ffb3b3; //SAMON PINK
+    // }
+    // // max
+    // @media (min-width: $max+px) {
+    //    background:#c1f0f0; //TEAL
+    // }
+}
+
+// Breakpoints
+$min           : 360;
+$small         : 480;
+$medium        : 800;
+$large         : 970;
+$max           : 1600;
+
+
+body {
+    @extend .font1;
+    color:$base-color;
+    font-size:$base-font;
+    letter-spacing: .5px;
+    font-family:$proxima-nova;
+    a{
+      color:$black;
+      &:hover{
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+}
+
+// Resposive Image
+img{
+  width:100%;
+  height: auto;
+}
+
+// Remove padding from cols
+// .padding-remove{
+//   @media (min-width: 767px){
+//     padding-right: 0;
+//   }
+// }
+
+
+
+// .container{
+//     @include container;
+// }
+// .resp-img{
+//   content: '';
+//   display: block;
+//   padding-top: calc(547 / 839 * 100%);
+// }

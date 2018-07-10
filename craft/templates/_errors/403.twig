@@ -1,0 +1,13 @@
+{% extends "_layouts/errors" %}
+
+{% set error = "403" %}
+{% set title = error ~ " Forbidden"|t %}
+
+{% block content %}
+  <main>
+    {# <a class="logo" href="/" title="Home">{{ sprite('logo') }}</a> #}
+    <h1>403: Forbidden</h1>
+    <p>{{ "You don’t have the proper credentials to access this page."|t }}</p>
+    <button onclick="history.back(-1)">Go back</button>
+  </main>
+{% endblock %}

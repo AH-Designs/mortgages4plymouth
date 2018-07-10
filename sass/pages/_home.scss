@@ -1,0 +1,212 @@
+  banner-advice{
+    display: block;
+    padding:162px 0;
+    position: relative;
+    $color:$white;
+    text-align: center;
+    background: $brandingBlue;
+    h2{
+      margin-bottom: 54px;
+      color:$white;
+      span{
+        color:$green;
+        text-transform: uppercase;
+      }
+    }
+    p{
+      max-width: 775px;
+      display: block;
+      margin: 0 auto;
+      line-height: 1.9;
+      @extend .medium;
+      color:$white;
+    }
+    .dog{
+      max-width: 372px;
+      position: absolute;
+      top:-240px;
+      left: calc(50% - 202px);
+    }
+  }
+
+  help-section{
+    display: block;
+    padding:80px 0;
+    &.help-background{
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position:center;
+      min-height:1080px;
+    }
+      .blocks-container{
+        .blocks{
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          max-width:1150px;
+          .box-link{
+            flex-basis: 25%;
+            min-height: 284px;
+            text-align: center;
+            position: relative;
+
+            // Slide Up
+              .slide-up{
+                position: absolute;
+                width:100%;
+                bottom:0;
+                background:$black;
+                color:$white;
+                padding:25px 30px 40px 30px;
+                h5{
+                  margin-bottom: 29px;
+                }
+                a{
+                  margin: 0 auto;
+                }
+              }
+
+            .circle-help{
+              background:$green;
+              height:311px;
+              width:311px;
+              position: absolute;
+              border-radius: 50%;
+              top: -125px;
+              left: 140px;
+              p{
+                font-size:$xxlarge-font;
+                color:$white;
+                @extend .medium;
+                position: absolute;
+                bottom:100px;
+                padding:0 53px;
+              }
+            }
+            .text{
+              height:100px;
+              position: absolute;
+              bottom: calc(50% - 50px);
+              width:100%;
+              p{
+                color:$white;
+                font-size:$xlarge-font;
+                @extend .medium;
+              }
+            }
+
+            &:first-of-type{
+              position: relative;
+            }
+            &:nth-of-type(3){
+              background: $green;
+              .slide-up{
+                background: $green;
+                a{
+                  color:$green;
+                  border:3px solid $green;
+                }
+              }
+            }
+            &:nth-of-type(4){
+              background: $yellow;
+              .slide-up{
+                background: $yellow;
+                a{
+                  color:$yellow;
+                  border:3px solid $yellow;
+                }
+              }
+            }
+            &:nth-of-type(5){
+              background:$orange;
+              .slide-up{
+                background: $orange;
+                a{
+                  color:$orange;
+                  border:3px solid $orange;
+                }
+              }
+            }
+            &:nth-of-type(6){
+              background:$purple;
+              .slide-up{
+                background: $purple;
+                a{
+                  color:$purple;
+                  border:3px solid $purple;
+                }
+              }
+            }
+            &:nth-of-type(7){
+              background:$pink;
+              .slide-up{
+                background: $pink;
+                a{
+                  color:$pink;
+                  border:3px solid $pink;
+                }
+              }
+            }
+            &:nth-of-type(10){
+              background:$lightBlue;
+              .slide-up{
+                background: $lightBlue;
+                a{
+                  color:$lightBlue;
+                  border:3px solid $lightBlue;
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+
+customers-say{
+  display: block;
+  background:$green;
+  padding:250px 0 100px;
+  position: relative;
+  .dog-head{
+    position: absolute;
+    max-width: 200px;
+    left:0;
+    top:-50px;
+  }
+  h2{
+    color:$brandingBlue;
+    @extend .medium;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .testimonial-container{
+    display: block;
+    justify-content: space-between;
+    @extend .light;
+    .testimonial{
+      width:100%;
+      margin-bottom: 30px;
+      p.content{
+        color:$white;
+        margin-bottom: 15px;
+      }
+      p.company-name{
+        color:$brandingBlue;
+      }
+    }
+  }
+  @media (min-width: 767px) {
+    padding-top:50px;
+    h2{
+      margin-bottom: 42px;
+    }
+    .testimonial-container{
+      display: flex;
+      .testimonial{
+        margin-bottom:0;
+        flex-basis: 30%;
+      }
+    }
+  }
+}

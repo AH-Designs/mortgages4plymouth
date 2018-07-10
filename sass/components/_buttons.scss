@@ -1,0 +1,30 @@
+// Buttons
+.button-default{
+  font-size:$base-font;
+  @extend .bold;
+  max-width:175px;
+  text-decoration: none;
+  background:$white;
+  padding:18px 38px;
+  color:$white;
+  text-align:center;
+  display: block;
+  width:100%;
+  // &.medium-btn{
+  //   max-width:232px;
+  // }
+  // &.small-btn{
+  //   max-width:167px;
+  // }
+  // &.xsmall-btn{
+  //   max-width:134px;
+  // }
+  &.button-green{
+    background:$green;
+    color:$white;
+ }
+ &.button-blue{
+   background:$brandingBlue;
+   color:$white;
+ }
+}

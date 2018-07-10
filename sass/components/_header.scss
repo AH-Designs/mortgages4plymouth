@@ -1,0 +1,65 @@
+
+header{
+  display: block;
+  padding: 25px 0;
+  font-family: $proxima-nova;
+  .main-logo{
+    img{
+      display: block;
+      max-width: 369px;
+    }
+  }
+  .menu{
+    text-align: right;
+    text-transform: uppercase;
+  }
+  @media (min-width: 992px){
+    .main-logo{
+      img{
+        max-width: 466px;
+      }
+    }
+    .contact{
+      a{
+        font-size: 28px;
+        color:$brandingBlue;
+        margin-bottom: 10px;
+        display: block;
+        font-weight: 600;
+        span{
+          text-transform: uppercase;
+          color:$white;
+        }
+        &:last-of-type{
+          font-size: 17px;
+          color:$brandingBlue;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.homepage-background{
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  min-height:1075px;
+  h1{
+    @extend .medium;
+    text-align: center;
+    color:$brandingBlue;
+    padding-top: 52px;
+    font-size: $xlarge-font;
+    span{
+      color:$green;
+    }
+  }
+  @media (min-width: 767px) {
+    h1{
+      font-size: $xxlarge-font;
+    }
+  }
+}

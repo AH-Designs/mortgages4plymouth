@@ -1,0 +1,30 @@
+@mixin container{
+    width: 100%;
+    max-width:$max + px;
+    margin:0px auto;
+    padding:0px $gaps;
+    @media (min-width: $medium+px) {
+        padding:0px 15px;
+    }
+
+}
+
+@mixin gradient{
+    background-image: -moz-linear-gradient( 0deg, rgb(227,231,242) 0%, rgb(255,255,255) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(227,231,242) 0%, rgb(255,255,255) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(227,231,242) 0%, rgb(255,255,255) 100%);
+    background-image: linear-gradient( 0deg, rgb(227,231,242) 0%, rgb(255,255,255) 100%);
+    // z-index: -5;
+}
+
+//*** Fonts from Rems to Pxs***
+@function calculateRem($size) {
+  $remSize: $size / 15px;
+  @return #{$remSize}rem;
+}
+// @include fontSize(12px);
+
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calcdlateRem($size);
+}

@@ -1,0 +1,13 @@
+{% extends "_layouts/errors" %}
+
+{% set error = "500" %}
+{% set title = error ~ " Internal Server Error"|t %}
+
+{% block content %}
+  <main>
+    {# <a class="logo" href="/" title="Home">{{ sprite('logo') }}</a> #}
+    <h1>500: Internal server error</h1>
+    <p>{{ "The server encountered an unexpected condition which prevented it from fulfilling the request."|t }}</p>
+    <button onclick="history.back(-1)">Go back</button>
+  </main>
+{% endblock %}

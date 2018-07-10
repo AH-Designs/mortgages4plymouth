@@ -1,0 +1,10 @@
+{% extends "_layouts/errors" %}
+
+{% set title = (siteName ? siteName ~ ' | ') ~ 'Coming Soon' %}
+{% set classes = "holding-page" %}
+
+{% block content %}
+  {# {{ sprite('logo')|default }} #}
+  <h1>{{ siteName|default('This website') }} is currently under going some maintenance</h1>
+  <p>Please check back soon.</p>
+{% endblock %}

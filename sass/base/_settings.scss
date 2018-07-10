@@ -1,0 +1,32 @@
+// Breakpoints
+$min           : 360;
+$small         : 480;
+$medium        : 800;
+$large         : 970;
+$max           : 1600;
+
+// Color Pallet
+
+$white         : #FFFFFF;
+$black         : #333333;
+$brandingBlue  : #003F88;
+$green         : #86B400;
+$yellow        : #FFC933;
+$orange        : #FA934C;
+$purple        : #724A90;
+$pink          : #E1556E;
+$lightBlue     : #6D9EEA;
+
+
+
+
+
+@mixin update-settings() {
+  @include add-breakpoint(
+    'max' $max,
+    'large' $large,
+    'medium' $medium,
+    'small' $small,
+    'min' $min
+  );
+}

@@ -1,0 +1,47 @@
+// Font Weight
+.font1, .regular { font-weight:200; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.font2, .light   { font-weight:300; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.font3, .medium  { font-weight:500; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.font4, .bold    { font-weight:600; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+// Font Families
+
+// Google Font
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+$comforta:'Comfortaa', cursive;
+
+// Type Kit
+@import url("https://use.typekit.net/mcu6auu.css");
+$proxima-nova:'proxima-nova';
+
+// *** Font-sizes ***
+
+// Base Font
+$base-font      :15px;
+
+// Sizes
+$xxlarge-font   :42px;
+$xlarge-font    :36px;
+$large-font     :25px;
+$xmedium-font   :23px;
+$medium-font    :18px;
+$mmedium-font   :14px;
+$small-font     :12px;
+$xsmall-font    :11px;
+
+// Headings
+h1{ @extend .regular; font-size: 42px;  }
+h2{
+   @extend .light;
+   font-size: $large-font;
+  @media (min-width: 767px) {
+    font-size: 42px
+  }
+}
+h3{ @extend .light; font-size: 25px;  }
+h4{ font-size: 20px; }
+h5{ font-size: 18px;}
+h6{ }
+
+// Base Font Color
+$base-color    :$black ;

@@ -1,0 +1,12 @@
+{% extends "_layouts/errors" %}
+
+{% set error = "404" %}
+{% set title = error ~ " Page not found"|t %}
+
+{% block content %}
+	<main>
+		{# <a class="logo" href="/" title="Home">{{ sprite('logo') }}</a> #}
+    <h1>{{craft.request.lastSegment|replace({'_': '&#32;', '-': '&#32;'})|title|raw}} page not found</h1>
+    <button onclick="history.back(-1)">Go back</button>
+  </main>
+{% endblock %}

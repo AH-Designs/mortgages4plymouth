@@ -1,0 +1,100 @@
+// ** Burger menu - (burger and cross controled in script.js file) **
+#main-menu{
+  .menu-title{
+    color:$brandingBlue;
+    z-index: 100px;
+    position: relative;
+  }
+  .burger{
+    outline: none;
+    width:50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    z-index: 100;
+    .line{
+      position: absolute;
+      left:0px;
+      height: 3px;
+      width: 100%;
+      background: $brandingBlue;
+    }
+    .line01{
+      top:25%;
+    }
+    .line02{
+      top:50%;
+    }
+    .line03{
+      top:75%;
+    }
+  }
+}
+
+//Menu Close class toggled in JS
+#main-menu{
+.menu-burger.close .line01{
+  transform:rotate(45deg);
+  top:50%;
+  background: $white;
+}
+.menu-burger.close .line02, .menu-burger.close .line03 {
+ transform:rotate(-45deg);
+ top:50%;
+background: $white;
+}
+}
+
+// ****Navigation*****
+#dropdown-menu{
+    p{
+      @include fontSize(18px);
+      margin-bottom: 40px;
+      color: $green;
+    }
+    // Display visibility transition
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    background: $brandingBlue;
+    font-family:$comforta;
+    @include fontSize(40px);
+    position: absolute;
+    z-index: 100;
+    //fixed Nav
+    position:fixed;
+    //full width of the screen menu.
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    padding-top: 85px;
+    text-align: center;
+    top:0;
+    transition: ease 0.4s;
+    ul{
+      text-align: center;
+      margin-bottom:70px;
+      li{
+        display: block;
+        margin-bottom:12px;
+        a{
+          display: block;
+          text-align: center;
+          color:$white;
+        }
+        &:last-of-type{
+          a{
+            color:$green;
+          }
+        }
+      }
+    }
+    // Show and Hide menu on click
+    &.activeMenu{
+      display: block;
+      // visible transition
+      visibility: visible;
+      opacity: 1;
+    }
+}
