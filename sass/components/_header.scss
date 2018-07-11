@@ -3,6 +3,17 @@ header{
   display: block;
   padding: 25px 0;
   font-family: $proxima-nova;
+  &.fix-header{
+    position: fixed;
+    z-index: 3;
+    left:0;
+    right:0;
+    transition: 0.3s ease;
+    &.active{
+      background: $white;
+      opacity: 0.9;
+    }
+  }
   .main-logo{
     img{
       display: block;
@@ -16,6 +27,7 @@ header{
   @media (min-width: 992px){
     .main-logo{
       img{
+        margin-top: 55px;
         max-width: 466px;
       }
     }
@@ -38,20 +50,38 @@ header{
         }
       }
     }
+    &.fix-header{
+        &.active{
+          .main-logo{
+            img{
+              margin-top: 0;
+            }
+          }
+          .contact{
+            a{
+              span{
+                color:$green;
+              }
+            }
+          }
+        }
+    }
   }
 }
-
+.spacer{
+  height:126px;
+}
 
 .homepage-background{
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
   min-height:1075px;
+  padding-top:200px;
   h1{
     @extend .medium;
     text-align: center;
     color:$brandingBlue;
-    padding-top: 52px;
     font-size: $xlarge-font;
     span{
       color:$green;

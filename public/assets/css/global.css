@@ -47,7 +47,7 @@ table {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.font3, .medium, .homepage-background h1, banner-advice p, help-section .blocks-container .blocks .box-link .circle-help p, help-section .blocks-container .blocks .box-link .text p, customers-say h2 {
+.font3, .medium, .homepage-background h1, banner-advice .banner-advice p, help-section .blocks-container .blocks .box-link .circle-help p, help-section .blocks-container .blocks .box-link .text p, customers-say h2 {
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -77,7 +77,7 @@ h5 {
 
 #main-menu .menu-title {
   color: #003F88;
-  z-index: 100px;
+  z-index: 6;
   position: relative; }
 #main-menu .burger {
   outline: none;
@@ -86,7 +86,7 @@ h5 {
   position: relative;
   cursor: pointer;
   background: none;
-  z-index: 100; }
+  z-index: 6; }
   #main-menu .burger .line {
     position: absolute;
     left: 0px;
@@ -118,11 +118,11 @@ h5 {
   font-size: 40px;
   font-size: calcdlateRem(40px);
   position: absolute;
-  z-index: 100;
+  z-index: 6;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 5;
   padding-top: 85px;
   text-align: center;
   top: 0;
@@ -137,7 +137,7 @@ h5 {
     margin-bottom: 70px; }
     #dropdown-menu ul li {
       display: block;
-      margin-bottom: 12px; }
+      margin-bottom: 15px; }
       #dropdown-menu ul li a {
         display: block;
         text-align: center;
@@ -170,6 +170,15 @@ header {
   display: block;
   padding: 25px 0;
   font-family: "proxima-nova"; }
+  header.fix-header {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    transition: 0.3s ease; }
+    header.fix-header.active {
+      background: #FFFFFF;
+      opacity: 0.9; }
   header .main-logo img {
     display: block;
     max-width: 369px; }
@@ -178,6 +187,7 @@ header {
     text-transform: uppercase; }
   @media (min-width: 992px) {
     header .main-logo img {
+      margin-top: 55px;
       max-width: 466px; }
     header .contact a {
       font-size: 28px;
@@ -192,17 +202,24 @@ header {
         font-size: 17px;
         color: #003F88;
         font-weight: 600;
-        margin-bottom: 0; } }
+        margin-bottom: 0; }
+    header.fix-header.active .main-logo img {
+      margin-top: 0; }
+    header.fix-header.active .contact a span {
+      color: #86B400; } }
+
+.spacer {
+  height: 126px; }
 
 .homepage-background {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 1075px; }
+  min-height: 1075px;
+  padding-top: 200px; }
   .homepage-background h1 {
     text-align: center;
     color: #003F88;
-    padding-top: 52px;
     font-size: 36px; }
     .homepage-background h1 span {
       color: #86B400; }
@@ -213,26 +230,27 @@ header {
 banner-advice {
   display: block;
   padding: 162px 0;
-  position: relative;
   text-align: center;
   background: #003F88; }
-  banner-advice h2 {
-    margin-bottom: 54px;
-    color: #FFFFFF; }
-    banner-advice h2 span {
-      color: #86B400;
-      text-transform: uppercase; }
-  banner-advice p {
-    max-width: 775px;
-    display: block;
-    margin: 0 auto;
-    line-height: 1.9;
-    color: #FFFFFF; }
-  banner-advice .dog {
-    max-width: 372px;
-    position: absolute;
-    top: -240px;
-    left: calc(50% - 202px); }
+  banner-advice .banner-advice {
+    position: relative; }
+    banner-advice .banner-advice h2 {
+      margin-bottom: 54px;
+      color: #FFFFFF; }
+      banner-advice .banner-advice h2 span {
+        color: #86B400;
+        text-transform: uppercase; }
+    banner-advice .banner-advice p {
+      max-width: 775px;
+      display: block;
+      margin: 0 auto;
+      line-height: 1.9;
+      color: #FFFFFF; }
+    banner-advice .banner-advice .dog {
+      max-width: 372px;
+      position: absolute;
+      top: -400px;
+      left: calc(50% - 202px); }
 
 help-section {
   display: block;
@@ -265,12 +283,16 @@ help-section {
           margin: 0 auto; }
       help-section .blocks-container .blocks .box-link .circle-help {
         background: #86B400;
+        border: 4px solid #86B400;
         height: 311px;
         width: 311px;
         position: absolute;
         border-radius: 50%;
         top: -125px;
-        left: 140px; }
+        left: 140px;
+        transition: ease 0.4s; }
+        help-section .blocks-container .blocks .box-link .circle-help:hover {
+          background: #FFFFFF; }
         help-section .blocks-container .blocks .box-link .circle-help p {
           font-size: 42px;
           color: #FFFFFF;

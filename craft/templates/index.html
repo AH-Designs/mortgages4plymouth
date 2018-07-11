@@ -3,23 +3,26 @@
 {% block content %}
 
 <div class="homepage-background" style="background-image:url('/assets/images/homepage-bg.jpg')";>
-    {% include 'components/header.twig' %}
 
-    <h1>{{ entry.title }}</h1>
+  <h1 class="fix-trigger">{{ entry.title }}</h1>
+
 </div>
 
 {% for block in entry.textBanner %}
 
 <banner-advice>
   <div class="container">
+    <div class="row">
+      <div class="col-xs-12 banner-advice">
+        {% if block.type == 'bannerText' %}
+          <h2>{{ block.bannerHeading }}</h2>
 
-    {% if block.type == 'bannerText' %}
-      <h2>{{ block.bannerHeading }}</h2>
+          <p>{{ block.bannerContent }}</p>
+        {% endif %}
 
-      <p>{{ block.bannerContent }}</p>
-    {% endif %}
-
-    <img class="dog" src="/assets/images/dog.png" alt="Dog">
+        <img class="dog" src="/assets/images/dog.png" alt="Dog">
+      </div>
+    </div>
   </div>
 </banner-advice>
 
